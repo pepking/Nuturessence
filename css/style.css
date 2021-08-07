@@ -55,7 +55,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
+  height: 40vh;
 }
 .top-info {
   display: flex;
@@ -118,7 +118,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  height: 120vh;
+  height: 115vh;
 }
 .section4 h1 {
   text-align: center;
@@ -135,10 +135,14 @@ body {
 .section4-content h2 {
   color: rgb(14, 226, 42);
 }
-.section4 button {
-  padding: 0.5rem 2rem;
-  border: rgb(14, 226, 42) solid 2px;
+.section4 .btn {
+  padding: 0.5rem;
+  border: rgb(14, 226, 42) solid 1px;
   color: #005816;
+}
+.section4 .btn:hover {
+  background: rgb(14, 226, 42);
+  color: #fff;
 }
 /*section 4 ends*/
 
@@ -166,6 +170,10 @@ body {
 /*section 5 ends*/
 
 /*section 6 starts*/
+.section6 {
+  background: rgb(241, 241, 241);
+  margin-bottom: 5rem;
+}
 .upcoming-event h1 {
   text-align: center;
   margin-top: 3rem;
@@ -182,7 +190,96 @@ body {
 .upcoming-event img {
   width: 40rem;
 }
+.upcoming-event .btn {
+  margin: 1rem;
+  color: rgb(14, 226, 42);
+}
+.upcoming-event .btn:hover {
+  background: rgb(14, 226, 42);
+  color: #fff;
+}
 /*section 6 ends*/
+/*section 7 starts*/
+.section7 h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: rgb(14, 226, 42);
+}
+.hi-slide {
+  position: relative;
+  width: 47.125rem;
+  height: 18.25rem;
+  margin: 7.188rem auto 0;
+}
+
+.hi-slide .hi-next,
+.hi-slide .hi-prev {
+  position: absolute;
+  top: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: -1.25rem;
+  border-radius: 3.125rem;
+
+  line-height: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  transition: all 0.7s;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.hi-slide .hi-next:hover,
+.hi-slide .hi-prev:hover {
+  opacity: 1;
+  background-color: rgb(18, 240, 66);
+}
+
+.hi-slide .hi-prev {
+  left: -4.375rem;
+}
+
+.hi-slide .hi-prev::before {
+  content: "<";
+}
+.hi-slide .hi-next {
+  right: -4.375rem;
+}
+.hi-slide .hi-next::before {
+  content: ">";
+}
+
+.hi-slide > ul {
+  list-style: none;
+  position: relative;
+  width: 47.125rem;
+  height: 18.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.hi-slide > ul > li {
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  left: 23.563rem;
+  top: 146px;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 3px solid rgb(34, 32, 32);
+  background-color: #333;
+  cursor: pointer;
+}
+
+.hi-slide > ul > li > img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
 
 /*last section starts*/
 .last-section {
@@ -256,7 +353,81 @@ body {
   .upcoming-event img {
     width: 45rem;
   }
+  /*section 7 starts*/
+  .hi-slide {
+    position: relative;
+    width: 40rem;
+    height: 18.25rem;
+    margin: 7.188rem auto 0;
+  }
 
+  .hi-slide .hi-next,
+  .hi-slide .hi-prev {
+    position: absolute;
+    top: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: -1.25rem;
+    border-radius: 3.125rem;
+
+    line-height: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    transition: all 0.7s;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  .hi-slide .hi-next:hover,
+  .hi-slide .hi-prev:hover {
+    opacity: 1;
+    background-color: rgb(18, 240, 66);
+  }
+
+  .hi-slide .hi-prev {
+    left: -0rem;
+  }
+
+  .hi-slide .hi-prev::before {
+    content: "<";
+  }
+  .hi-slide .hi-next {
+    right: -4.375rem;
+  }
+  .hi-slide .hi-next::before {
+    content: ">";
+  }
+
+  .hi-slide > ul {
+    list-style: none;
+    position: relative;
+    width: 15rem;
+    height: 10rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hi-slide > ul > li {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    left: 23.563rem;
+    top: 146px;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 3px solid rgb(34, 32, 32);
+    background-color: #333;
+    cursor: pointer;
+  }
+
+  .hi-slide > ul > li > img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+  }
   /*last section starts*/
   .subscribe > div img {
     width: 37rem;
@@ -283,7 +454,12 @@ body {
   .upcoming-event img {
     width: 30rem;
   }
-
+  /*section 7 starts*/
+  .hi-slide {
+    position: relative;
+    width: 30rem;
+    height: 18.25rem;
+  }
   /*last section starts*/
   .subscribe > div img {
     width: 35rem;
@@ -304,6 +480,11 @@ body {
   /*section 6 starts*/
   .upcoming-event img {
     width: 25rem;
+  } /*section 7 starts*/
+  .hi-slide {
+    position: relative;
+    width: 21rem;
+    height: 18.25rem;
   }
 
   /*last section starts*/

@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded',function(event){
      });
     }
   }
-  // start the text animation
+  // start the slider animation
   StartTextAnimation(0);
 });
+$('.slide').hiSlide();
