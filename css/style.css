@@ -8,41 +8,51 @@ body {
 /*Top start*/
 .top-header {
   background: rgb(14, 226, 42);
-  padding: 0.5rem;
+  padding: 0;
+  margin: 0;
 }
 .top-contact {
-  margin-left: 5rem;
+  text-align: center;
 }
 .top-header a {
   text-decoration: none;
   color: aliceblue;
-  font-size: 1.1rem;
-  margin: 1rem;
+  font-size: 1rem;
+  margin: 0.5rem;
 }
 .top-header a:hover {
-  color: gray;
+  color: rgb(224, 224, 224);
 }
 
 /*top end*/
 /*nav start*/
+.section2 {
+  padding: 0;
+  margin: 0;
+  height: 1vh;
+}
 .bg-light {
   background: rgb(255, 255, 255);
 }
 .navbar-brand img {
-  width: 10rem;
+  width: 15rem;
+  margin-left: 2rem;
 }
 .navbar-light .navbar-nav .nav-link {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
   text-transform: uppercase;
 }
 .navbar-light .navbar-nav .nav-item {
-  margin: 0 15px;
+  margin: 0 0.938rem;
 }
 .navbar-collapse {
   margin-left: 10rem;
 }
-.nav-item a :active {
+.navbar-light .navbar-nav .nav-link:hover {
+  color: rgb(14, 226, 42);
+}
+.navbar-light .navbar-nav .nav-link :active {
   color: rgb(14, 226, 42);
 }
 
@@ -55,7 +65,9 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  height: 40vh;
+  height: 55vh;
+  margin: 0;
+  padding: 0;
 }
 .top-info {
   display: flex;
@@ -65,10 +77,13 @@ body {
   color: #fff;
 }
 .top-info1 img {
-  width: 20rem;
+  width: 30rem;
+  margin-top: 5rem;
+  margin-left: 7rem;
 }
 .top-info1 h2 {
   padding-right: 5rem;
+  margin-left: 7rem;
 }
 .btn {
   padding: 0.5rem 2rem;
@@ -81,32 +96,6 @@ body {
   border: none;
   font-weight: 700;
 }
-/*animating myPic*/
-.myPic img {
-  -webkit-animation: mover 1s infinite alternate;
-  animation: mover 1s infinite alternate;
-}
-.myPic img {
-  -webkit-animation: mover 1s infinite alternate;
-  animation: mover 3s infinite alternate;
-}
-@-webkit-keyframes mover {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
-@keyframes mover {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
-/*end of animation*/
 
 /*section 3 ends*/
 
@@ -118,7 +107,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  height: 115vh;
+  height: 100vh;
 }
 .section4 h1 {
   text-align: center;
@@ -129,17 +118,25 @@ body {
 }
 .section4-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 1rem;
 }
 .section4-content h2 {
   color: rgb(14, 226, 42);
 }
 .section4 .btn {
-  padding: 0.5rem;
+  padding: 1.5 0rem;
   border: rgb(14, 226, 42) solid 1px;
   color: #005816;
+  margin-top: 5rem;
+  text-align: center;
 }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .section4 .btn:hover {
   background: rgb(14, 226, 42);
   color: #fff;
@@ -199,18 +196,72 @@ body {
   color: #fff;
 }
 /*section 6 ends*/
+/*speakers section starts*/
+.all-speaker h1 {
+  text-align: center;
+  color: rgb(18, 240, 66);
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 1rem;
+}
+.speaker-info {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.all-speaker h3 {
+  color: rgb(25, 133, 48);
+  font-weight: 700;
+}
+.speaker-info > div {
+  margin: 1rem;
+  height: 80vh;
+  text-align: center;
+  border: rgb(201, 197, 197) solid 1px;
+  box-shadow: 5px 15px 15px 5px rgb(161, 161, 161);
+  border-radius: 10px;
+}
+.speaker-info img {
+  margin-top: 1rem;
+  width: 15rem;
+  border: #fff solid 10px;
+  box-shadow: 5px 15px 15px 5px rgb(130, 156, 120);
+}
+.speaker-info > div a {
+  text-decoration: none;
+  color: #08fa44;
+}
+.speaker-info > div a h6:hover {
+  font-size: 20px;
+}
+.all-speaker button {
+  margin-top: 2rem;
+  border: #08fa44 solid 3px;
+  color: #08fa44;
+}
+.all-speaker button:hover {
+  font-size: 15px;
+  color: #fff;
+  background: #08fa44;
+  border: #08fa44;
+}
+
+/*speakers section ends*/
 /*section 7 starts*/
 .section7 h1 {
   text-align: center;
   font-weight: 700;
   font-size: 2.4rem;
   color: rgb(14, 226, 42);
+  margin-top: 5rem;
 }
 .hi-slide {
   position: relative;
   width: 47.125rem;
   height: 18.25rem;
   margin: 7.188rem auto 0;
+  overflow: hidden;
 }
 
 .hi-slide .hi-next,
@@ -280,6 +331,74 @@ body {
   height: 100%;
   background-position: center;
 }
+/*patner section starts*/
+.marquee h1 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #08fa44;
+  margin-top: 5rem;
+  padding: 1rem;
+}
+logo-slider {
+  padding: 20px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.inner {
+  display: flex;
+  position: relative;
+  animation: marquee 10s linear infinite;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 1rem;
+
+  /*/ Debug: This is just to help see where the loop happens
+    // &:nth-of-type(1) { &, img { border:1px dashed red;  }}
+    // &:nth-of-type(2) { &, img { border:1px dashed blue; }}
+
+    // You may need this if there are too few images for the banner width
+    //min-width:100%;*/
+}
+.inner img:hover {
+  animation-play-state: paused;
+  cursor: grab;
+}
+.inner img {
+  display: block;
+  width: 15rem;
+  margin: 2.5rem;
+}
+
+.inner img:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    to right,
+    white,
+    rgba(white, 0) 80px,
+    rgba(white, 0) calc(100% - 80px),
+    white
+  );
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/*partner section ends*/
 
 /*last section starts*/
 .last-section {
@@ -316,6 +435,9 @@ body {
   padding-left: 2rem;
   margin-top: 1rem;
 }
+.last-icons {
+  text-align: center;
+}
 .subscribe .last-icons a {
   background: rgb(14, 226, 42);
   text-align: center;
@@ -326,7 +448,13 @@ body {
   text-decoration: none;
 }
 /*last section ends*/
-
+.top {
+  position: fixed;
+  bottom: 7.5rem;
+  right: 2rem;
+  z-index: 100;
+  display: none;
+}
 /*footer*/
 .footer {
   display: flex;
@@ -345,13 +473,36 @@ body {
   }
 }
 @media all and (max-width: 991px) {
+  /*nav*/
+  /*section3*/
+  .top-info1 img {
+    margin-left: 0;
+  }
+  .top-info1 h2 {
+    margin-left: 0;
+  }
   /*section 4 startss*/
   .section4-content {
     flex-direction: column;
+    margin-left: 5rem;
+  }
+  .section4 {
+    height: 120vh;
   }
   /*section 6 starts*/
   .upcoming-event img {
     width: 45rem;
+  }
+  /*speaker section*/
+  .speaker-info > div {
+    height: 110vh;
+  }
+  .speaker-info img {
+    width: 25rem;
+  }
+  .speaker-info {
+    flex-direction: column;
+    margin-top: 1rem;
   }
   /*section 7 starts*/
   .hi-slide {
@@ -440,6 +591,13 @@ body {
   }
 }
 @media all and (max-width: 768px) {
+  /*nav*/
+  /*section3*/
+  .section3 {
+    height: 70vh;
+  }
+  /*section 4*/
+
   /*section 5 starts*/
   .bussiness-box {
     flex-direction: column;
@@ -452,7 +610,17 @@ body {
 
   /*section 6 starts*/
   .upcoming-event img {
-    width: 30rem;
+    width: 27rem;
+  }
+  /*speaker section*/
+  .speaker-info > div {
+    height: 100vh;
+  }
+  .speaker-info {
+    flex-direction: column;
+  }
+  .speaker-info img {
+    width: 20rem;
   }
   /*section 7 starts*/
   .hi-slide {
@@ -464,13 +632,21 @@ body {
   .subscribe > div img {
     width: 35rem;
   }
+  .subscribe button {
+    padding: 0.4rem 8rem;
+  }
 }
 @media all and (max-width: 480px) {
-  .top-header a {
-    margin: 0.5;
-  }
   .top-info1 img {
     width: 10rem;
+  }
+  /*section 3*/
+  .section3 {
+    height: 50vh;
+  }
+  /*section 4*/
+  .section4 {
+    height: 90vh;
   }
   .section4-content {
     flex-direction: column;
@@ -480,7 +656,12 @@ body {
   /*section 6 starts*/
   .upcoming-event img {
     width: 25rem;
-  } /*section 7 starts*/
+  }
+  /*speaker section*/
+  .speaker-info img {
+    width: 10rem;
+  }
+  /*section 7 starts*/
   .hi-slide {
     position: relative;
     width: 21rem;
@@ -489,10 +670,24 @@ body {
 
   /*last section starts*/
   .subscribe > div img {
-    width: 20rem;
+    width: 15rem;
   }
-
+  .form-control {
+    padding: 0.5rem 0;
+    width: 8rem;
+    margin: 5rem;
+  }
+  .subscribe {
+    text-align: center;
+  }
+  .subscribe input {
+    width: 100%;
+    margin: 1rem;
+  }
+  .speaker-info > div {
+    height: 70vh;
+  }
   .footer {
-    font-size: 5px;
+    font-size: 10px;
   }
 }

@@ -1,11 +1,11 @@
-
+ 
 
 
 
 
 document.addEventListener('DOMContentLoaded',function(event){
   // array with texts to type in typewriter
-  var dataText = [ "...For clearity of your path.", "...To be a better You", "...come and join us", "Xperience conversation!"];
+  var dataText = [ "...turning boldest dreams into amazing realities", "...believe, think and perform differently","...be better every day, in every way"];
   
   // type one text in the typwriter
   // keeps calling itself until the text is finished
@@ -46,3 +46,61 @@ document.addEventListener('DOMContentLoaded',function(event){
   StartTextAnimation(0);
 });
 $('.slide').hiSlide();
+// smooth scrolling 
+
+$('a[href*="#"]').on('click',function(e){
+
+  e.preventDefault();
+
+  $('html, body').animate({
+
+    scrollTop : $($(this).attr('href')).offset().top,
+
+  },
+    500, 
+    'linear'
+  );
+
+});
+//Partner slider section
+function handleMarquee(){
+  const marquee = document.querySelectorAll('.marquee');
+  let speed = 6;
+  let lastScrollPos = 0;
+  let timer;
+
+  marquee.forEach(function(el){
+    // stop animation on mouseenter
+    mouseEntered = false;
+    document.querySelector('.inner').addEventListener('mouseenter', function() {
+      mouseEntered = true;
+    })
+    document.querySelector('.inner').addEventListener('mouseleave', function() {
+      mouseEntered = false
+    })
+
+    const container = el.querySelector('.inner');
+    const content = el.querySelector('.inner > *');
+    //Get total width
+    const  elWidth = content.offsetWidth;
+    
+    //Duplicate content
+    let clone = content.cloneNode(true);
+    container.appendChild(clone);
+    
+    let progress = 1;
+    function loop(){
+      if (mouseEntered === false) {progress = progress-speed;} 
+      if (progress <= elWidth*-1) {progress=0;}
+      container.style.transform = 'translateX(' + progress + 'px)';
+      window.requestAnimationFrame(loop);
+    }
+    loop();
+  });
+  
+  function handleSpeedClear(){
+    speed = 6;
+  }
+};
+
+handleMarquee();
